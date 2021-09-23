@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{% block body %}
+
+<div class="form">
+    <!-- TITLE -->
+    <h1 class="form-title">Delete</h1>
+    <hr class="form-hr">
+
+    <!-- FORM -->
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- FIELDS -->
+        <div class="form-delete">
+            <span>Are you sure you want to delete</span><br>
+            <span>{{ item.name }}?</span>
+        </div>
+        
+        <!-- BUTTONS -->
+        <div class="form-btn-container">
+            <button type="submit" class="btn btn-success btn-sm form-btn">Yes</button>
+            <a href="{% url 'index' %}" class="btn btn-danger btn-sm form-btn">No</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

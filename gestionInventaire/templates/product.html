@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+
+{% block body %}
+
+<div class="form">
+    <!-- FIELDS -->
+    <h1 class="form-title">{{ item.name }}</h1>
+    <label class="form-label">Description</label>
+    <p>{{ item.description }}</p>
+    <label class="form-label">Type</label>
+    <a>{{ item.product_type }}</a>
+    <label class="form-label">Price</label>
+    <span>{{ item.price }}$</span>
+    <label class="form-label">Current quantity</label>
+    <span>{{ item.current_quantity }}</span>
+    <label class="form-label">Stock quantity</label>
+    <span>{{ item.stock_quantity }}</span>
+
+    <!-- BUTTONS -->
+    <div class="form-btn-container">
+        <a href="{% url 'index' %}" class="btn btn-success btn-sm form-btn">Back</a>
+        <a href="{% url 'edit' item.pk %}" class="btn btn-warning btn-sm form-btn">Edit</a>
+        <a href="{% url 'delete' item.pk %}" class="btn btn-danger btn-sm form-btn">Delete</a>
+    </div>
+</div>
+
+{% endblock %}

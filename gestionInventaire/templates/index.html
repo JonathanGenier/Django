@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+
+{% block body %}
+
+<!-- PRODUCT TABLE -->
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Current Quantity</th>
+            <th>Stock Quantity</th>
+            <th></th>
+            <th class="btn-cell"><a href="{% url 'add' %}" class="btn btn-success btn-sm">Add new product</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for item in items %}
+        <tr onclick="location.href='{% url 'product' item.pk %}'">
+            <td>{{ item.name }}</td>
+            <td class="description">{{ item.description }}</td>
+            <td>{{ item.product_type }}</td>
+            <td>{{ item.price }}$</td>
+            <td>{{ item.current_quantity }}</td>
+            <td >{{ item.stock_quantity }}</td>
+            <td class="btn-cell"><a href="{% url 'edit' item.pk %}" class="btn btn-warning btn-sm">Edit</a></td>
+            <td class="btn-cell"><a href="{% url 'delete' item.pk %}" class="btn btn-danger btn-sm">Remove</a></td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+
+{% endblock %}

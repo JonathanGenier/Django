@@ -1,0 +1,104 @@
+:root {
+    --z0clr: rgb(99, 99, 99);
+    --z1clr: rgb(165, 165, 165);
+    --z2clr: white;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000AA;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url(../images/bg_storage.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px 0px 0px 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.page-container {
+    display: flex;
+    padding: 30px 0px 0px 0px;
+}
+
+.table {
+    background-color: var(--z2clr);
+    border: 2px solid black;
+    width: 80%;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: var(--z1clr);
+}
+
+.description {
+    width: 40%;
+}
+
+.btn-cell {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--z1clr);
+    width: 400px;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-title {
+    text-align: center;
+}
+
+.form-hr {
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-label {
+    font-weight: bold;
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+.form-delete {
+    color: #AA0000;
+    text-align: center;
+    margin: 25px auto;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.form-input {
+    border-radius: 5px;   
+    width: 100%;
+}
+
+.form-btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 30px;
+    margin-left: auto;
+}
+
+.form-btn {
+    margin: 5px 0px 0px auto;
+    width: 125px;
+    border: 1px solid black;
+}
+
+.navbar-user {
+    display: flex;
+    flex-direction: column;
+}
